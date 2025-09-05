@@ -17,20 +17,20 @@ const Footer = () => {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 lg:col-span-1 text-2xl">
+          <div className="col-span-1 lg:col-span-1 text-xl">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <Code className="h-8 w-8 text-white" />
-              <span className="text-2xl font-bold">BlinkCode</span>
+              <span className="text-xl font-bold">BlinkCode</span>
             </Link>
-            <p className="text-gray-400 mb-4 max-w-md text-left text-2xl">
+            <p className="text-gray-400 mb-4 max-w-md text-left text-xl">
               We create exceptional digital experiences through innovative web
               development, helping businesses thrive in the digital landscape.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="pl-16 text-2xl">
-            <h3 className="text-2xl font-semibold mb-4 underline">
+          <div className="pl-16 text-xl">
+            <h3 className="text-xl font-semibold mb-4 underline">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -67,10 +67,10 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4 underline">
+            <h3 className="text-xl font-semibold mb-4 underline">
               Contact Info
             </h3>
-            <div className="space-y-3 text-2xl">
+            <div className="space-y-3 text-xl">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gray-400" />
                 <span className="text-gray-400">hello@blinkcode.com</span>

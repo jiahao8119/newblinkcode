@@ -21,7 +21,7 @@ function App() {
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="text-center">
         <img
-          src="/src/public/images/blinkcode.jpg"
+          src="/images/blinkcode.jpg"
           alt="Blinkcode"
           className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-lg"
         />
