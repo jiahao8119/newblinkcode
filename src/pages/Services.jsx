@@ -259,100 +259,6 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-              Compare Our Services
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              See which package best fits your business needs.
-            </p>
-          </div>
-
-          {/* Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse shadow-lg rounded-lg overflow-hidden bg-white">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="p-5 text-left text-gray-900 font-semibold text-lg">
-                    Features
-                  </th>
-                  <th className="p-5">
-                    <div className="flex flex-col items-center">
-                      <span className="font-bold text-gray-900">Starter</span>
-                      <span className="text-sm text-gray-500">$2,500+</span>
-                    </div>
-                  </th>
-                  <th className="p-5 bg-gray-900 text-white rounded-t-lg">
-                    <div className="flex flex-col items-center">
-                      <span className="font-bold">Business</span>
-                      <span className="text-sm opacity-80">$5,000+</span>
-                    </div>
-                    <span className="mt-2 inline-block text-xs font-semibold px-2 py-1 bg-yellow-400 text-gray-900 rounded">
-                      Most Popular
-                    </span>
-                  </th>
-                  <th className="p-5">
-                    <div className="flex flex-col items-center">
-                      <span className="font-bold text-gray-900">
-                        Enterprise
-                      </span>
-                      <span className="text-sm text-gray-500">$8,000+</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200 text-gray-700">
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    Responsive Design
-                  </td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    SEO Optimization
-                  </td>
-                  <td className="p-4 text-center">Basic</td>
-                  <td className="p-4 text-center">Advanced</td>
-                  <td className="p-4 text-center">Enterprise</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">E-commerce</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Custom Web Apps</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Mobile App</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    Support & Maintenance
-                  </td>
-                  <td className="p-4 text-center">3 months</td>
-                  <td className="p-4 text-center">6 months</td>
-                  <td className="p-4 text-center">12 months</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,6 +284,126 @@ const Services = () => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Heading */}
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+              Compare Our Services
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              See which package best fits your business needs.
+            </p>
+          </div>
+
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse shadow-lg rounded-lg overflow-hidden bg-white">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="p-5 text-left text-gray-900 font-semibold text-lg">
+                    Features
+                  </th>
+                  <th className="p-5">
+                    <div className="flex flex-col items-center">
+                      <span className="font-bold text-gray-900">Starter</span>
+                      <span className="text-sm text-gray-500">RM 1,999+</span>
+                    </div>
+                  </th>
+                  <th className="p-5 bg-gray-900 text-white rounded-t-lg">
+                    <div className="flex flex-col items-center">
+                      <span className="font-bold">Business</span>
+                      <span className="text-sm opacity-80">RM 3,999+</span>
+                    </div>
+                    <span className="mt-2 inline-block text-xs font-semibold px-2 py-1 bg-yellow-400 text-gray-900 rounded">
+                      Most Popular
+                    </span>
+                  </th>
+                  <th className="p-5">
+                    <div className="flex flex-col items-center">
+                      <span className="font-bold text-gray-900">
+                        Enterprise
+                      </span>
+                      <span className="text-sm text-gray-500">RM 7,999+</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 text-gray-700">
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">Pages</td>
+                  <td className="p-4 text-center font-bold">5</td>
+                  <td className="p-4 text-center font-bold">15</td>
+                  <td className="p-4 text-center font-bold">30+</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">Revisions</td>
+                  <td className="p-4 text-center font-bold">3</td>
+                  <td className="p-4 text-center font-bold">10</td>
+                  <td className="p-4 text-center font-bold">unlimited</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">
+                    SEO Optimization
+                  </td>
+                  <td className="p-4 text-center font-bold">Basic</td>
+                  <td className="p-4 text-center font-bold">Advanced</td>
+                  <td className="p-4 text-center font-bold">Enterprise</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">E-commerce</td>
+                  <td className="p-4 text-center">❌</td>
+                  <td className="p-4 text-center">❌</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">Mobile App</td>
+                  <td className="p-4 text-center">❌</td>
+                  <td className="p-4 text-center">❌</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">Custom API</td>
+                  <td className="p-4 text-center">❌</td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">
+                    Free 1 year Hosting
+                  </td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">
+                    Free 1 year Domain
+                  </td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">SSL protection</td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                  <td className="p-4 text-center">✅</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="p-4 text-left font-medium">
+                    Support & Maintenance
+                  </td>
+                  <td className="p-4 text-center font-bold">3 months</td>
+                  <td className="p-4 text-center font-bold">6 months</td>
+                  <td className="p-4 text-center font-bold">12 months</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
