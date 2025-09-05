@@ -71,6 +71,13 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <section className="">
+          <img 
+            src="/src/public/images/bg.png" 
+            alt="BlinkCode Banner" 
+            className="w-full h-60 rounded-2xl shadow-xl object-cover"
+          />
+      </section>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-black via-gray-900 to-black pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
