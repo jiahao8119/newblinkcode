@@ -1,3 +1,31 @@
+@keyframes jump {
+	0%, 100% { transform: translateY(0); }
+	20% { transform: translateY(-0.5em); }
+	40% { transform: translateY(0); }
+}
+
+.jump {
+	display: inline-block;
+	animation: jump 1s infinite;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  font-family: 'Gotham', sans-serif;
+}
+
+/* Optional: reset heading tags to inherit */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-family: inherit;
+}

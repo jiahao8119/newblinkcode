@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -18,12 +18,26 @@ function App() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-white">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid mx-auto mb-4"></div>
-          <p className="text-lg font-semibold">Loading...</p>
-        </div>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="text-center">
+        <img
+          src="/src/public/images/blinkcode.jpg"
+          alt="Blinkcode"
+          className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-lg"
+        />
+        <p className="text-xl text-gray-600 font-mono flex justify-center space-x-1">
+          {"Loading...".split("").map((char, i) => (
+            <span
+              key={i}
+              className="jump"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </span>
+          ))}
+        </p>
       </div>
+    </div>
     );
   }
 
