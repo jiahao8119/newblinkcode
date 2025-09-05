@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         gotham: ['Gotham', 'sans-serif'],// 👈 Add this
       },
+      colors: {
+        gotham: '#252525',
+      },
     },
   },
   plugins: [],

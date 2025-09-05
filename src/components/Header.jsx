@@ -17,11 +17,11 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+  <header className="bg-white shadow-md fixed w-full top-0 z-50" style={{ fontFamily: 'Gotham, sans-serif' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-2 group" style={{ fontFamily: 'Gotham, sans-serif' }}>
             <Code className="h-8 w-8 text-black group-hover:text-gray-700 transition-colors" />
             <span className="text-xl font-bold text-black group-hover:text-gray-700 transition-colors">
               DevStudio
@@ -29,7 +29,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8" style={{ fontFamily: 'Gotham, sans-serif' }}>
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -60,7 +60,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-100 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-100 rounded-lg mt-2" style={{ fontFamily: 'Gotham, sans-serif' }}>
               {navigation.map((item) => (
                 <Link
                   key={item.name}
