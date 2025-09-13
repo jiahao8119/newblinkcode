@@ -37,23 +37,22 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex space-x-8"
+            className="hidden md:flex space-x-4"
             style={{ fontFamily: "Gotham, sans-serif" }}
           >
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors relative 
-        ${isActive(item.path) ? "text-black" : "text-gray-600 hover:text-black"}
-        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-black 
-        hover:after:w-full after:transition-all after:duration-300
+                className={`relative text-sm font-medium transition-colors px-4 py-2 rounded-full
+        ${
+          isActive(item.path)
+            ? "bg-blue-400 text-white"
+            : "text-gray-600 hover:text-black hover:bg-gray-100"
+        }
       `}
               >
                 {item.name}
-                {isActive(item.path) && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black"></span>
-                )}
               </Link>
             ))}
           </nav>

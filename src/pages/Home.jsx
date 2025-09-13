@@ -71,38 +71,31 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="">
-          <img 
-            src="/src/public/images/bg.png" 
-            alt="BlinkCode Banner" 
-            className="w-full h-60 rounded-2xl shadow-xl object-cover"
-          />
-      </section>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black pt-16 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black py-32 sm:py-40 lg:py-52">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[32rem]">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-10 leading-tight drop-shadow-lg">
               Building Digital
               <span className="block bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent">
                 Experiences
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto">
               We create exceptional websites, mobile apps, and digital solutions
               that help businesses thrive in the modern digital landscape.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors group"
+                className="inline-flex items-center px-10 py-4 bg-white text-black text-lg font-semibold rounded-xl hover:bg-gray-200 transition-colors group shadow-lg"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center px-10 py-4 border-2 border-gray-600 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-colors shadow-lg"
               >
                 View Our Work
               </Link>

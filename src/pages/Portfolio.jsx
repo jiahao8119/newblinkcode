@@ -55,36 +55,6 @@ const Portfolio = () => {
       liveUrl: '#',
       githubUrl: '#',
     },
-    {
-      id: 6,
-      title: 'Learning Platform',
-      category: 'Web App',
-      image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Online learning platform with video streaming and progress tracking.',
-      technologies: ['Angular', 'NestJS', 'PostgreSQL', 'AWS'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 7,
-      title: 'Marketplace App',
-      category: 'Mobile App',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Mobile marketplace app connecting buyers and sellers.',
-      technologies: ['Flutter', 'Firebase', 'Dart', 'PayPal API'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 8,
-      title: 'Fashion Store',
-      category: 'E-commerce',
-      image: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Luxury fashion e-commerce site with advanced filtering and AR try-on.',
-      technologies: ['Next.js', 'Shopify', 'TypeScript', 'Three.js'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
   ];
 
   const categories = ['All', 'Website', 'E-commerce', 'Mobile App', 'Web App'];
@@ -149,12 +119,6 @@ const Portfolio = () => {
                       >
                         <ExternalLink className="h-5 w-5" />
                       </a>
-                      <a
-                        href={project.githubUrl}
-                        className="bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -170,7 +134,7 @@ const Portfolio = () => {
                     {project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-black text-white text-xs px-2 py-1 rounded"
+                        className="bg-blue-400 text-white text-xs px-2 py-1 rounded"
                       >
                         {tech}
                       </span>
@@ -179,15 +143,9 @@ const Portfolio = () => {
                   <div className="flex space-x-4">
                     <a
                       href={project.liveUrl}
-                      className="flex-1 bg-black text-white text-center py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                      className="flex-1 bg-blue-500 text-white text-center py-2 rounded-lg hover:bg-gray-600 transition-colors"
                     >
-                      View Live
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="flex-1 border border-black text-black text-center py-2 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      View Code
+                      View Website
                     </a>
                   </div>
                 </div>
@@ -231,7 +189,7 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Start Your Project?
