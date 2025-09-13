@@ -18,11 +18,15 @@ const Header = () => {
 
   return (
     <header
-      className="bg-white shadow-md fixed w-full top-0 z-50"
+      className="fixed w-full top-0 z-50 rounded-3xl"
       style={{ fontFamily: "Gotham, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div
+          className="flex justify-between items-center h-16
+          rounded-3xl px-6 mt-4
+          bg-white/30 backdrop-blur-xl shadow-lg border border-white/20"
+        >
           {/* Logo */}
           <Link
             to="/"
@@ -37,20 +41,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex space-x-4"
+            className="hidden md:flex space-x-2"
             style={{ fontFamily: "Gotham, sans-serif" }}
           >
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative text-sm font-medium transition-colors px-4 py-2 rounded-full
-        ${
-          isActive(item.path)
-            ? "bg-blue-400 text-white"
-            : "text-gray-600 hover:text-black hover:bg-gray-100"
-        }
-      `}
+                className={`relative text-sm font-medium px-4 py-2 rounded-full transition
+                  ${
+                    isActive(item.path)
+                      ? "bg-black/70 text-white"
+                      : "text-gray-800 hover:text-black hover:bg-white/40"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -60,7 +63,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-md text-gray-600 hover:text-black hover:bg-white/40 transition-colors"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -68,9 +71,9 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden mt-2">
             <div
-              className="px-2 pt-2 pb-3 space-y-1 bg-gray-100 rounded-lg mt-2"
+              className="px-2 pt-2 pb-3 space-y-1 rounded-2xl bg-white/30 backdrop-blur-xl border border-white/20 shadow-lg"
               style={{ fontFamily: "Gotham, sans-serif" }}
             >
               {navigation.map((item) => (
@@ -78,11 +81,12 @@ const Header = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                    isActive(item.path)
-                      ? "text-black bg-gray-200"
-                      : "text-gray-600 hover:text-black hover:bg-gray-200"
-                  }`}
+                  className={`block px-3 py-2 text-base font-medium rounded-xl transition
+                    ${
+                      isActive(item.path)
+                        ? "bg-black/60 text-white"
+                        : "text-gray-800 hover:text-black hover:bg-white/40"
+                    }`}
                 >
                   {item.name}
                 </Link>
