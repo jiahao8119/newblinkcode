@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-600">
             © 2025 BlinkCodeDev. All rights reserved. | Privacy Policy | Terms of
             Service
           </p>

@@ -25,7 +25,7 @@ const Header = () => {
         <div
           className="flex justify-between items-center h-16
           rounded-3xl px-6 mt-4
-          bg-white/30 backdrop-blur-xl shadow-lg border border-white/20"
+          bg-white/50 backdrop-blur-xl shadow-lg border border-white/20"
         >
           {/* Logo */}
           <Link

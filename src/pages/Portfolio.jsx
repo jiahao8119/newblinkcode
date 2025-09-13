@@ -98,6 +98,12 @@ const Portfolio = () => {
       {/* Projects Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {filteredProjects.length === 0 ? (
+            <div className="text-center py-24">
+              <h3 className="text-2xl font-semibold text-gray-700 mb-2">More projects coming soon!</h3>
+              <p className="text-gray-500">We’re working on exciting new projects. Stay tuned!</p>
+            </div>
+          ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <div key={project.id} className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -148,6 +154,7 @@ const Portfolio = () => {
               </div>
             ))}
           </div>
+          )}
         </div>
       </section>
 

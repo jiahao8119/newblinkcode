@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Globe,
   Smartphone,
@@ -10,6 +9,7 @@ import {
   Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import {useState, useEffect} from 'react';
 
 const techs = [
   {
@@ -260,7 +260,8 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
+            {/* Process Section with Dynamic Progress Bar */}
+      <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
@@ -272,21 +273,51 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="border-2 border-black text-black w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {item.step}
+          {/* Progress Bar */}
+          <div className="relative w-full h-2 bg-gray-200 rounded-full mb-16 overflow-hidden">
+          {/* Filled progress */}
+          <motion.div
+            className="absolute top-0 left-0 h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${((3 - 1) / (process.length - 1)) * 100}%` }}
+            transition={{ duration: 1.5 }}
+          >
+            {/* Shine overlay */}
+            <div className="absolute inset-0 overflow-hidden rounded-full">
+              <div className="shine absolute top-0 left-[-50%] h-full w-1/3 bg-white/40 skew-x-12"></div>
+            </div>
+          </motion.div>
+        </div>
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {process.map((item, index) => {
+              const currentStep = 3; // <-- dynamically set this from props/state
+              const isCompleted = index < currentStep;
+
+              return (
+                <div key={index} className="text-center relative z-10">
+                  <div
+                    className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full border-4 text-xl font-bold transition-all duration-500
+                      ${
+                        isCompleted
+                          ? "bg-gradient-to-br from-black via-gray-900 to-black text-white border-transparent"
+                          : "border-black text-black"
+                      }`}
+                  >
+                    {item.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-black mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600">{item.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+
 
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -302,8 +333,8 @@ const Services = () => {
 
           {/* Table */}
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse shadow-lg rounded-lg overflow-hidden bg-white">
-              <thead className="bg-gray-100">
+            <table className="w-full border-collapse shadow-lg rounded-3xl overflow-hidden bg-white">
+              <thead className="bg-gray-200">
                 <tr>
                   <th className="p-5 text-left text-gray-900 font-semibold text-lg">
                     Features

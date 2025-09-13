@@ -1,0 +1,22 @@
+/* global.css - for custom global styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example: Gotham font-face (adjust path as needed) */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamBook.woff2') format('woff2'),
+       url('/fonts/GothamBook.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Example: Apply Gotham font globally */
+h1, h2, h3, h4, span, p {
+  font-family: 'Gotham', Arial, sans-serif;
+}
+
+/* Add your custom global styles below */
