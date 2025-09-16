@@ -27,7 +27,7 @@ function App() {
             className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-lg"
           />
           <p className="text-xl text-gray-600 font-mono flex justify-center space-x-1">
-            {"Loading...".split("").map((char, i) => (
+            {"A moment...".split("").map((char, i) => (
               <span
                 key={i}
                 className="jump"
