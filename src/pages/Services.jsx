@@ -9,7 +9,8 @@ import {
   Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
+import { Rocket } from "lucide-react";
 
 const techs = [
   {
@@ -45,10 +46,6 @@ const techs = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
-    name: "AWS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
-  },
-  {
     name: "Docker",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
@@ -75,7 +72,9 @@ const Services = () => {
         "Content Management",
         "Performance Optimization",
       ],
-      price: "Starting at $2,500",
+      price: "Starting at RM 1,199",
+      image: "/images/services/webdev.png",
+      hot: true, // 🔥 mark as hot selling
     },
     {
       icon: <ShoppingCart className="h-12 w-12 text-white" />,
@@ -88,7 +87,10 @@ const Services = () => {
         "Order Processing",
         "Analytics Dashboard",
       ],
-      price: "Starting at $5,000",
+      price: "Starting at RM 5,999",
+      image: "/images/services/webdev2.png",
+      comingSoon: false, // 🚧 mark as coming soon
+      hot: true,
     },
     {
       icon: <Smartphone className="h-12 w-12 text-white" />,
@@ -101,7 +103,10 @@ const Services = () => {
         "App Store Deployment",
         "Push Notifications",
       ],
-      price: "Starting at $8,000",
+      price: "Starting at RM 7,999",
+      image: "/images/services/webdev3.png",
+      comingSoon: true,
+      
     },
     {
       icon: <Code className="h-12 w-12 text-white" />,
@@ -114,7 +119,10 @@ const Services = () => {
         "API Development",
         "User Management",
       ],
-      price: "Starting at $10,000",
+      price: "Starting at RM 10,000",
+      image: "/images/services/design.png",
+      hot: true, // also hot
+      comingSoon: true,
     },
     {
       icon: <Search className="h-12 w-12 text-white" />,
@@ -127,46 +135,8 @@ const Services = () => {
         "Content Strategy",
         "Analytics Reporting",
       ],
-      price: "Starting at $800/month",
-    },
-    {
-      icon: <Palette className="h-12 w-12 text-white" />,
-      title: "UI/UX Design",
-      description:
-        "Beautiful, user-friendly interfaces that enhance user experience and conversion rates.",
-      features: [
-        "User Research",
-        "Wireframing",
-        "Prototyping",
-        "Design Systems",
-      ],
-      price: "Starting at $1,500",
-    },
-    {
-      icon: <Server className="h-12 w-12 text-white" />,
-      title: "Hosting & Maintenance",
-      description:
-        "Reliable hosting solutions with ongoing maintenance and support services.",
-      features: [
-        "99.9% Uptime",
-        "Regular Backups",
-        "Security Updates",
-        "24/7 Support",
-      ],
-      price: "Starting at $100/month",
-    },
-    {
-      icon: <Shield className="h-12 w-12 text-white" />,
-      title: "Security Audits",
-      description:
-        "Comprehensive security assessments to protect your digital assets.",
-      features: [
-        "Vulnerability Assessment",
-        "Security Recommendations",
-        "Penetration Testing",
-        "Compliance Review",
-      ],
-      price: "Starting at $2,000",
+      price: "Starting at RM 500 / month",
+      image: "/images/services/webdev.png",
     },
   ];
 
@@ -229,16 +199,39 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col"
               >
+                {service.image && (
+                  <div className="mb-4 relative">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-60 object-cover rounded-lg"
+                    />
+                    {/* 🔥 Hot Selling badge */}
+                    {service.hot && (
+                      <span className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        🔥 Hot Selling
+                      </span>
+                    )}
+                  </div>
+                )}
+
+                {/* Icon + Title */}
                 <div className="mb-4 text-black">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-black mb-2">
                   {service.title}
                 </h3>
+
+                {/* Price */}
                 <div className="text-gray-700 font-medium mb-4">
                   {service.price}
                 </div>
+
+                {/* Description */}
                 <p className="text-gray-600 mb-4">{service.description}</p>
+
+                {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li
@@ -250,9 +243,17 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full border border-black text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-                  Learn More
-                </button>
+
+                {/* Button */}
+                {service.comingSoon ? (
+                  <button className="mt-auto w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg cursor-not-allowed">
+                    Coming Soon
+                  </button>
+                ) : (
+                  <button className="mt-auto w-full border border-black text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    Learn More
+                  </button>
+                )}
               </div>
             ))}
           </div>
@@ -260,7 +261,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-            {/* Process Section with Dynamic Progress Bar */}
+      {/* Process Section with Dynamic Progress Bar */}
       <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -275,19 +276,38 @@ const Services = () => {
 
           {/* Progress Bar */}
           <div className="relative w-full h-2 bg-gray-200 rounded-full mb-16 overflow-hidden">
-          {/* Filled progress */}
-          <motion.div
-            className="absolute top-0 left-0 h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${((3 - 1) / (process.length - 1)) * 100}%` }}
-            transition={{ duration: 1.5 }}
-          >
-            {/* Shine overlay */}
-            <div className="absolute inset-0 overflow-hidden rounded-full">
-              <div className="shine absolute top-0 left-[-50%] h-full w-1/3 bg-white/40 skew-x-12"></div>
+            {/* Filled progress */}
+            <motion.div
+              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              {/* Shine overlay */}
+              <div className="absolute inset-0 overflow-hidden rounded-full">
+                <div className="shine absolute top-0 left-[-50%] h-full w-1/3 bg-white/40 skew-x-12"></div>
+              </div>
+            </motion.div>
+
+            {/* 🚀 Rocket wrapper full width */}
+            <div className="absolute -top-10 left-0 w-full h-10 pointer-events-none">
+              <motion.div
+                className="absolute"
+                animate={{ x: ["0%", "100%"] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              >
+                <Rocket className="h-8 w-8 text-pink-500 drop-shadow-lg" />
+              </motion.div>
             </div>
-          </motion.div>
-        </div>
+          </div>
 
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
@@ -318,7 +338,6 @@ const Services = () => {
         </div>
       </section>
 
-
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Heading */}
@@ -342,7 +361,7 @@ const Services = () => {
                   <th className="p-5">
                     <div className="flex flex-col items-center">
                       <span className="font-bold text-gray-900">Starter</span>
-                      <span className="text-sm text-gray-500">RM 1,999+</span>
+                      <span className="text-sm text-gray-500">RM 1,199+</span>
                     </div>
                   </th>
                   <th className="p-5 bg-gray-900 text-white rounded-t-lg">

@@ -4,27 +4,27 @@ import { Users, Target, Award, Heart } from 'lucide-react';
 const About = () => {
   const team = [
     {
-      name: 'Alex Rivera',
+      name: 'Ryan',
       role: 'CEO & Founder',
-      image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/images/nfthead/nft1.png',
       description: 'Visionary leader with 15+ years in tech entrepreneurship.',
     },
     {
-      name: 'Sam Chen',
+      name: 'Jh',
       role: 'CTO',
-      image: 'https://images.pexels.com/photos/3182796/pexels-photo-3182796.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/images/nfthead/nft2.png',
       description: 'Full-stack expert specializing in modern web technologies.',
     },
     {
-      name: 'Maya Patel',
+      name: 'ZF',
       role: 'Lead Designer',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/images/nfthead/nft3.png',
       description: 'Creative designer passionate about user experience.',
     },
     {
-      name: 'Jordan Smith',
+      name: 'Dustin',
       role: 'Senior Developer',
-      image: 'https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/images/nfthead/nft4.png',
       description: 'Backend specialist with expertise in scalable solutions.',
     },
   ];
@@ -75,13 +75,13 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Founded in 2015, DevStudio began as a small team of passionate developers 
+              <p className="text-lg text-gray-700 mb-6 text-justify">
+                Founded in 2024, BlinkCodeDevStudio began as a small team of passionate developers 
                 who believed that exceptional digital experiences could transform businesses. 
-                What started as a two-person garage startup has grown into a leading web 
+                What started as a two-person team startup has grown into a leading web 
                 development agency serving clients worldwide.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 text-justify">
                 Over the years, we've had the privilege of working with startups, 
                 established businesses, and enterprise clients across various industries. 
                 Our commitment to innovation, quality, and client satisfaction has been 
@@ -89,24 +89,23 @@ const About = () => {
               </p>
               <div className="grid grid-cols-3 gap-8 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-black">500+</div>
+                  <div className="text-3xl font-bold text-black">100+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-black">50+</div>
+                  <div className="text-3xl font-bold text-black">90+</div>
                   <div className="text-gray-600">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-black">10+</div>
+                  <div className="text-3xl font-bold text-black">5+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
               </div>
             </div>
             <div className="lg:text-right">
               <img
-                src="https://images.pexels.com/photos/3182757/pexels-photo-3182757.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/services/meetingteam.webp"
                 alt="Team working together"
-                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -124,7 +123,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-center">
-              <div className="bg-black p-8 rounded-lg mb-6">
+              <div className="bg-gradient-to-br from-black via-gray-900 to-black p-8 rounded-lg mb-6">
                 <Target className="h-16 w-16 text-white mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                 <p className="text-gray-300">
@@ -135,7 +134,7 @@ const About = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-black p-8 rounded-lg mb-6">
+              <div className="bg-gradient-to-br from-black via-gray-900 to-black p-8 rounded-lg mb-6">
                 <Award className="h-16 w-16 text-white mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-gray-300">
@@ -182,7 +181,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

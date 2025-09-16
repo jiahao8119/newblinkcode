@@ -42,7 +42,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-8 w-8 text-white" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+60 1133094116",
       description: "Mon-Fri from 8am to 6pm",
     },
     {
@@ -65,9 +65,6 @@ const Contact = () => {
     "Mobile App Development",
     "Web Applications",
     "SEO & Digital Marketing",
-    "UI/UX Design",
-    "Hosting & Maintenance",
-    "Security Audits",
   ];
 
   return (
@@ -322,10 +319,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
-              Call Us Now
+              Schedule Consultation Now
             </button>
           </div>
         </div>

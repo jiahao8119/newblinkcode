@@ -29,36 +29,36 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="pl-16 text-xl">
+          <div className="pl-16 text-lg">
             <h3 className="text-xl font-semibold mb-4 underline">
               Quick Links
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-white">
+                <Link to="/" className="text-gray-600 hover:text-black">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-white">
+                <Link to="/about" className="text-gray-600 hover:text-black">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-white">
+                <Link to="/services" className="text-gray-600 hover:text-black">
                   Services
                 </Link>
               </li>
               <li>
                 <Link
                   to="/portfolio"
-                  className="text-gray-600 hover:text-white"
+                  className="text-gray-600 hover:text-black"
                 >
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-white">
+                <Link to="/contact" className="text-gray-600 hover:text-black">
                   Contact
                 </Link>
               </li>
@@ -70,18 +70,18 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4 underline">
               Contact Info
             </h3>
-            <div className="space-y-3 text-xl">
+            <div className="space-y-3 text-lg">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">hello@blinkcode.com</span>
+                <span className="text-gray-600">hej@blinkcode.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">60123456789</span>
+                <span className="text-gray-600">601133094116</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">PJ SUBANG KL</span>
+                <span className="text-gray-600">Kuala Lumpur, Malaysia</span>
               </div>
             </div>
           </div>

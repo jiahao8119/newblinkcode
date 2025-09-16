@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const navigate = useNavigate();
 
   const projects = [
   {
@@ -201,7 +203,8 @@ const Portfolio = () => {
             Let's create something amazing together. Contact us to discuss your 
             project requirements and get a free consultation.
           </p>
-          <button className="px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors">
+          <button className="px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors"
+            onClick={() => navigate("/contact")}>
             Start Your Project
           </button>
         </div>

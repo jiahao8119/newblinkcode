@@ -6,6 +6,7 @@ import {
   Smartphone,
   Globe,
   Star,
+  User,
   CheckCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -13,25 +14,22 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
-    icon: <Globe className="h-12 w-12 text-white" />,
     title: "Custom Websites",
     description:
       "Beautiful, responsive websites tailored to your brand and business needs.",
-    image: "/src/public/images/bg.png", // example image path
+    image: "/images/services/webdev.png", // example image path
   },
   {
-    icon: <Smartphone className="h-12 w-12 text-white" />,
     title: "Mobile Apps",
     description:
       "Native and cross-platform mobile applications that engage your users.",
-    image: "/src/public/images/bg.png",
+    image: "/images/services/webdev2.png",
   },
   {
-    icon: <Code className="h-12 w-12 text-white" />,
     title: "Web Applications",
     description:
       "Powerful web applications built with modern technologies and frameworks.",
-    image: "/src/public/images/bg.png",
+    image: "/images/services/webdev3.png",
   },
 ];
 
@@ -174,9 +172,6 @@ const Home = () => {
                   />
 
                   <div className="p-8 text-center">
-                    <div className="mb-4 text-indigo-600 flex justify-center">
-                      {service.icon}
-                    </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                       {service.title}
                     </h3>
@@ -220,11 +215,8 @@ const Home = () => {
                 className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-md"
               >
                 {/* Image */}
-                <img
-                  src={testimonials[index].image}
-                  alt={testimonials[index].name}
-                  className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-300"
-                />
+                {/* Person Icon instead of Image */}
+<User className="w-24 h-24 text-gray-400 mb-4 border-2 border-gray-300 rounded-full p-4 bg-gray-100" />
 
                 {/* Rating */}
                 <div className="flex mb-4">
