@@ -57,7 +57,7 @@ function App() {
         </main>
         <Footer />
         <a
-          href="https://wa.me/601133094116?text=Hi%20there!%20I%20want%20to%20know%20more%20about%20your%20websites%20services."
+          href="https://wa.me/60124277286?text=Hi%20there!%20I%20want%20to%20know%20more%20about%20your%20websites%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
