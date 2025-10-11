@@ -89,3 +89,21 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   animation: spin-slow 60s linear infinite;
 }
 
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInBlur {
+  animation: fadeInBlur 1.2s ease-out forwards;
+}
+
+

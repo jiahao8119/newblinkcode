@@ -11,26 +11,34 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // 1.5 seconds
+    const timer = setTimeout(() => {
+      setFadeOut(true); // start fade+blur out animation
+      setTimeout(() => setLoading(false), 700); // wait until fade-out completes
+    }, 1500); // show loader for 1.5s
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div
+        className={`flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 text-white transition-all duration-700 ease-out ${
+          fadeOut ? "opacity-0 blur-md" : "opacity-100 blur-0"
+        }`}
+      >
         <div className="text-center">
           <img
             src="/images/blinkcode.jpg"
             alt="Blinkcode"
-            className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-lg"
+            className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-2xl"
           />
-          <p className="text-xl text-gray-600 font-mono flex justify-center space-x-1">
-            {"A moment...".split("").map((char, i) => (
+          <p className="text-3xl font-mono text-gray-200">
+            {"Just A moment...".split("").map((char, i) => (
               <span
                 key={i}
-                className="jump"
+                className="jump inline-block"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
                 {char === " " ? "\u00A0" : char}
@@ -44,7 +52,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col opacity-0 blur-md animate-fadeInBlur">
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -56,6 +64,8 @@ function App() {
           </Routes>
         </main>
         <Footer />
+
+        {/* Floating WhatsApp Button */}
         <a
           href="https://wa.me/60124277286?text=Hi%20there!%20I%20want%20to%20know%20more%20about%20your%20websites%20services."
           target="_blank"
@@ -63,7 +73,6 @@ function App() {
           className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
         >
           <FaWhatsapp className="w-6 h-6" />
-          {/* Or use: <MessageCircle className="w-6 h-6" /> */}
         </a>
       </div>
     </Router>
