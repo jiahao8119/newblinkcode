@@ -37,46 +37,56 @@ const About = () => {
       </section>
 
       {/* Company Story */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">
                 Our Story
               </h2>
-              <p className="text-xl text-gray-700 mb-6 text-justify">
-                Founded in 2024, BlinkCodeDevStudio began as a small team of passionate developers 
-                who believed that exceptional digital experiences could transform businesses. 
-                What started as a two-person team startup has grown into a leading web 
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 text-justify sm:text-center lg:text-justify">
+                Founded in 2024, BlinkCodeDevStudio began as a small team of passionate developers
+                who believed that exceptional digital experiences could transform businesses.
+                What started as a two-person team startup has grown into a leading web
                 development agency serving clients worldwide.
               </p>
-              <p className="text-xl text-gray-700 mb-6 text-justify">
-                Over the years, we've had the privilege of working with startups, 
-                established businesses, and enterprise clients across various industries. 
-                Our commitment to innovation, quality, and client satisfaction has been 
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 text-justify sm:text-center lg:text-justify">
+                Over the years, we've had the privilege of working with startups,
+                established businesses, and enterprise clients across various industries.
+                Our commitment to innovation, quality, and client satisfaction has been
                 the driving force behind our growth and success.
               </p>
-              <div className="grid grid-cols-3 gap-8 mt-8">
+
+              {/* Stats Section */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8">
                 <div className="text-center">
-                  <div className="text-7xl font-bold text-[#4E56C0]">100+</div>
-                  <div className="text-gray-600">Projects Completed</div>
+                  <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#4E56C0]">100+</div>
+                  <div className="text-gray-600 text-base sm:text-lg">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-7xl font-bold text-[#9B5DE0]">90+</div>
-                  <div className="text-gray-600">Happy Clients</div>
+                  <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#9B5DE0]">90+</div>
+                  <div className="text-gray-600 text-base sm:text-lg">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-7xl font-bold text-[#D78FEE]">5+</div>
-                  <div className="text-gray-600">Years Experience</div>
+                  <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-[#D78FEE]">5+</div>
+                  <div className="text-gray-600 text-base sm:text-lg">Years Experience</div>
                 </div>
               </div>
             </div>
-            <div className="lg:text-right">
-              <img src="/images/services/meetingteam.webp" alt="Team working together" className="rounded-lg shadow-lg" />
+
+            {/* Right Image */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src="/images/services/meetingteam.webp"
+                alt="Team working together"
+                className="rounded-lg shadow-lg w-full max-w-md sm:max-w-lg lg:max-w-full object-cover"
+              />
             </div>
           </div>
         </div>
-      </section>
+        </section>
+
 
       {/* Mission & Vision */}
       <section className="py-20 bg-gray-50">

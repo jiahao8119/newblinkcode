@@ -70,53 +70,56 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-32 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
-        {/* 🌍 Rotating Earth Layer */}
+      <section className="relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
+        {/* 🌍 Static Earth Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <img
             src="/images/earth.jpg"
-            alt="Rotating Earth"
-            className="w-[2000px] h-[1000px]"
+            alt="Earth Background"
+            className="w-[900px] sm:w-[1400px] md:w-[2000px] h-auto object-cover"
           />
         </div>
 
         {/* 🫧 Gradient Blobs */}
         <div className="absolute inset-0">
-          <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-full blur-3xl opacity-50 animate-pulse" />
-          <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
+          <div className="absolute -top-32 -left-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-full blur-3xl opacity-50 animate-pulse" />
+          <div className="absolute -bottom-32 -right-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
         </div>
 
         {/* 🌟 Main Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[32rem]">
-          <div className="text-center">
-            <div className="text-[72px] md:text-[96px] font-extrabold text-white mb-10 leading-tight drop-shadow-lg">
-              Building{" "}
-              <span className="bg-gradient-to-r from-indigo-400 via-pink-400 to-orange-300 bg-clip-text text-transparent">
-                Digital Experiences
-              </span>
-            </div>
-            <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto">
-              We design, build, and launch digital experiences that empower
-              brands and captivate audiences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-lg font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
-              >
-                Get Started
-                <ArrowRight className="ml-3 h-5 w-5" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center px-10 py-4 border-2 border-white text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all shadow-lg"
-              >
-                View Our Work
-              </Link>
-            </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center justify-center min-h-[24rem] sm:min-h-[32rem] text-center">
+          <h1 className="text-[38px] sm:text-[60px] md:text-[96px] font-extrabold text-white mb-6 sm:mb-10 leading-tight drop-shadow-lg px-4">
+            Building{" "}
+            <span className="bg-gradient-to-r from-indigo-400 via-pink-400 to-orange-300 bg-clip-text text-transparent">
+              Digital Experiences
+            </span>
+          </h1>
+
+          <p className="text-base sm:text-2xl md:text-3xl text-gray-200 mb-10 sm:mb-12 max-w-2xl sm:max-w-4xl mx-auto px-4">
+            We design, build, and launch digital experiences that empower brands and
+            captivate audiences.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center w-full sm:w-auto px-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-base sm:text-lg font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg w-full sm:w-auto"
+            >
+              Get Started
+              <ArrowRight className="ml-3 h-5 w-5" />
+            </Link>
+
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border-2 border-white text-white text-base sm:text-lg font-semibold rounded-xl hover:bg-white/10 transition-all shadow-lg w-full sm:w-auto"
+            >
+              View Our Work
+            </Link>
           </div>
         </div>
       </section>
+
+
 
       {/* Company Overview */}
       <section className="py-20 bg-white">
