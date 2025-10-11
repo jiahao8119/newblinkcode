@@ -23,7 +23,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="flex justify-between items-center h-16
+          className="flex justify-between items-center h-24
           rounded-3xl px-6 mt-4
           bg-white/50 backdrop-blur-xl shadow-lg border border-white/20"
         >
@@ -34,7 +34,7 @@ const Header = () => {
             style={{ fontFamily: "Gotham, sans-serif" }}
           >
             <Code className="h-8 w-8 text-black group-hover:text-gray-700 transition-colors" />
-            <span className="text-xl font-bold text-black group-hover:text-gray-700 transition-colors">
+            <span className="text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">
               BlinkCode
             </span>
           </Link>
@@ -48,7 +48,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative text-sm font-medium px-4 py-2 rounded-full transition
+                className={`relative text-xl font-medium px-4 py-2 rounded-full transition
                   ${
                     isActive(item.path)
                       ? "bg-black/70 text-white"

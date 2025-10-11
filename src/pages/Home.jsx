@@ -37,7 +37,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     company: "Tech Innovations Inc.",
-    text: "DevStudio transformed our vision into a stunning website that perfectly represents our brand.",
+    text: "BlinkCodeDevStudio transformed our vision into a stunning website that perfectly represents our brand.",
     rating: 5,
     image: "/src/public/images/bg.png", // add your image path
   },
@@ -51,7 +51,7 @@ const testimonials = [
   {
     name: "Emily Rodriguez",
     company: "Digital Solutions",
-    text: "Professional, efficient, and innovative. DevStudio is our go-to development partner.",
+    text: "Professional, efficient, and innovative. BlinkCodeDevStudio is our go-to development partner.",
     rating: 5,
     image: "/src/public/images/bg.png",
   },
