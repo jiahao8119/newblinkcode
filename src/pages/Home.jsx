@@ -76,52 +76,9 @@ const Home = () => {
           <img
             src="/images/earth.jpg"
             alt="Rotating Earth"
-            className="w-[2000px] h-[3000px] object-cover animate-spin-slow"
+            className="w-[2000px] h-[1000px]"
           />
         </div>
-
-        {/* 🌌 Aurora Layer */}
-        {/* Aurora Motion Background */}
-        <div className="absolute inset-0 overflow-hidden -z-10">
-          <div className="aurora w-[200%] h-[200%] absolute -top-1/2 -left-1/2 opacity-50 blur-3xl" />
-        </div>
-
-        <style jsx global>{`
-          @keyframes auroraMove {
-            0% {
-              transform: translate(0%, 0%) rotate(0deg);
-              background-position: 0% 50%;
-            }
-            50% {
-              transform: translate(10%, -10%) rotate(10deg);
-              background-position: 100% 50%;
-            }
-            100% {
-              transform: translate(0%, 0%) rotate(0deg);
-              background-position: 0% 50%;
-            }
-          }
-
-          .aurora {
-            background: radial-gradient(
-                circle at 20% 30%,
-                rgba(155, 93, 224, 0.6),
-                transparent 40%
-              ),
-              radial-gradient(
-                circle at 80% 70%,
-                rgba(253, 207, 250, 0.4),
-                transparent 40%
-              ),
-              radial-gradient(
-                circle at 50% 50%,
-                rgba(78, 86, 192, 0.5),
-                transparent 40%
-              );
-            background-size: 200% 200%;
-            animation: auroraMove 15s ease-in-out infinite alternate;
-          }
-        `}</style>
 
         {/* 🫧 Gradient Blobs */}
         <div className="absolute inset-0">
