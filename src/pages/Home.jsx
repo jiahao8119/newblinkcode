@@ -69,9 +69,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="mt-[-90px] relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
-        {/* 🌍 Static Earth Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <img
             src="/images/earth.jpg"
@@ -79,14 +77,10 @@ const Home = () => {
             className="w-[900px] sm:w-[1400px] md:w-[2000px] h-auto object-cover"
           />
         </div>
-
-        {/* 🫧 Gradient Blobs */}
         <div className="absolute inset-0">
           <div className="absolute -top-32 -left-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-full blur-3xl opacity-50 animate-pulse" />
           <div className="absolute -bottom-32 -right-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
         </div>
-
-        {/* 🌟 Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center justify-center min-h-[24rem] sm:min-h-[32rem] text-center">
           <h1 className="text-[38px] sm:text-[60px] md:text-[96px] font-extrabold text-white mb-6 sm:mb-10 leading-tight drop-shadow-lg px-4">
             Building{" "}
@@ -119,9 +113,6 @@ const Home = () => {
         </div>
       </section>
 
-
-
-      {/* Company Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -210,7 +201,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">

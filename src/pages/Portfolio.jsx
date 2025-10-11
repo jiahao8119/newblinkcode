@@ -68,7 +68,6 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* 🌈 Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
@@ -136,7 +135,7 @@ const Portfolio = () => {
                           href={project.liveUrl}
                           className="bg-white text-[#4E56C0] p-2 rounded-full hover:bg-gray-100 transition"
                         >
-                          <ExternalLink className="h-5 w-5" />
+                          <ExternalLink className="h-8 w-8" />
                         </a>
                       </div>
                     </div>
@@ -151,16 +150,6 @@ const Portfolio = () => {
                       </span>
                     </div>
                     <p className="text-gray-600 mb-4">{project.description}</p>
-                    {/* <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="bg-gradient-to-r from-[#9B5DE0] to-[#D78FEE] text-white text-xs px-2 py-1 rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div> */}
                     <a
                       href={project.liveUrl}
                       className="block w-full text-center bg-gradient-to-r from-[#4E56C0] to-[#9B5DE0] text-white py-2 rounded-lg hover:opacity-90 transition"
