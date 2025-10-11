@@ -19,8 +19,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-1 text-xl">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Code className="h-24 w-24 text-black" />
-              <span className="text-7xl font-bold">BlinkCode</span>
+              <Code className="h-12 w-12 text-black" />
+              <span className="text-4xl font-bold">BlinkCode</span>
             </Link>
             <p className="text-gray-600 mb-4 max-w-md text-left text-xl">
               We create exceptional digital experiences through innovative web
@@ -30,10 +30,10 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="pl-16 text-lg">
-            <h3 className="text-3xl font-semibold mb-4 underline">
+            <h3 className="text-2xl font-semibold mb-4 underline">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-2xl">
+            <ul className="space-y-2 text-xl">
               <li>
                 <Link to="/" className="text-gray-600 hover:text-black hover:underline">
                   Home
@@ -67,21 +67,21 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-3xl font-semibold mb-4 underline">
+            <h3 className="text-2xl font-semibold mb-4 underline">
               Contact Info
             </h3>
             <div className="space-y-3 text-xl">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600 text-2xl">hej@blinkcode.com</span>
+                <span className="text-gray-600 text-xl">hej@blinkcode.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600 text-2xl">60124277286</span>
+                <span className="text-gray-600 text-xl">60124277286</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600 text-2xl">Kuala Lumpur, Malaysia</span>
+                <span className="text-gray-600 text-xl">Kuala Lumpur, Malaysia</span>
               </div>
             </div>
           </div>

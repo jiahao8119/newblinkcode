@@ -26,7 +26,7 @@ const About = () => {
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
             About DevStudio
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -41,7 +41,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-7xl font-bold text-black mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                 Our Story
               </h2>
               <p className="text-xl text-gray-700 mb-6 text-justify">
@@ -82,7 +82,7 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold mb-4">
+            <h2 className="text-5xl md:text-5xl font-bold mb-4">
               Mission & Vision
             </h2>
           </div>
@@ -118,7 +118,7 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-6xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
               Meet Our Team
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -153,7 +153,7 @@ const About = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-7xl font-bold mb-4">Our Core Values</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Values</h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               These values guide everything we do and shape how we work with our 
               clients and each other.

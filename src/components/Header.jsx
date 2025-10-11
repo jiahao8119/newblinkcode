@@ -23,7 +23,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="flex justify-between items-center h-24
+          className="flex justify-between items-center h-16
           rounded-3xl px-6 mt-4 
           bg-white/50 backdrop-blur-xl shadow-lg border border-white/20"
         >
@@ -34,7 +34,7 @@ const Header = () => {
             style={{ fontFamily: "blinkcode, sans-serif" }}
           >
             <Code className="h-8 w-8 text-black group-hover:text-gray-700 transition-colors" />
-            <span className="text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">
+            <span className="text-2xl font-bold text-black group-hover:text-gray-700 transition-colors">
               BlinkCode
             </span>
           </Link>

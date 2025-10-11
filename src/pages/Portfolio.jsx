@@ -74,7 +74,7 @@ const Portfolio = () => {
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
             Our Portfolio
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -178,7 +178,7 @@ const Portfolio = () => {
       {/* 📄 PDF Viewer Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-7xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Company Profile & Case Study
           </h2>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -213,7 +213,7 @@ const Portfolio = () => {
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
             Ready to Start Your Project?
           </h2>
           <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto">

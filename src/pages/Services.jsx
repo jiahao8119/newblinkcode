@@ -174,7 +174,7 @@ const Services = () => {
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
             Our Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -188,7 +188,7 @@ const Services = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-7xl font-bold text-[#4E56C0] mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#4E56C0] mb-4">
               What We Do
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -256,7 +256,7 @@ const Services = () => {
       <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-7xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Project Timeline
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -321,7 +321,7 @@ const Services = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-7xl font-extrabold mb-6 drop-shadow">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow">
               Compare Our Services
             </h2>
             <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto">
@@ -400,7 +400,7 @@ const Services = () => {
         <div className="absolute inset-0 backdrop-blur-[2px]" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-7xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Technologies We Use
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -446,7 +446,7 @@ const Services = () => {
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
             Ready to Get Started?
           </h2>
           <p className="text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
