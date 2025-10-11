@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header
-      className="fixed w-full top-0 z-50 rounded-3xl"
+      className="sticky w-full top-0 z-[9999] rounded-3xl"
       style={{ fontFamily: "blinkcode, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

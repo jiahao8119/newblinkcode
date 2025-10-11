@@ -70,7 +70,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
+      <section className="mt-[-90px] relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
         {/* 🌍 Static Earth Background */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <img
