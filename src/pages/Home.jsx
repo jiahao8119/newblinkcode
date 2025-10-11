@@ -71,12 +71,21 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
-        {/* 🌌 Aurora Motion Layer */}
+        {/* 🌍 Rotating Earth Layer */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-30">
+          <img
+            src="/images/earth.jpg"
+            alt="Rotating Earth"
+            className="w-[2000px] h-[3000px] object-cover animate-spin-slow"
+          />
+        </div>
+
+        {/* 🌌 Aurora Layer */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="aurora absolute w-[200%] h-[200%] top-[-50%] left-[-50%]" />
         </div>
 
-        {/* 🫧 Accent Blobs (existing ones, slightly refined) */}
+        {/* 🫧 Gradient Blobs */}
         <div className="absolute inset-0">
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-full blur-3xl opacity-50 animate-pulse" />
           <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
