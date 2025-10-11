@@ -70,30 +70,42 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black py-32 sm:py-40 lg:py-52">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[32rem]">
+      <section className="relative overflow-hidden py-32 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
+        {/* 🌌 Aurora Motion Layer */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="aurora absolute w-[200%] h-[200%] top-[-50%] left-[-50%]" />
+        </div>
+
+        {/* 🫧 Accent Blobs (existing ones, slightly refined) */}
+        <div className="absolute inset-0">
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-blue-500/40 to-purple-500/30 rounded-full blur-3xl opacity-50 animate-pulse" />
+          <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
+        </div>
+
+        {/* 🌟 Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[32rem]">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-10 leading-tight drop-shadow-lg">
-              Building Digital
-              <span className="block bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent">
-                Experiences
+            <div className="text-[72px] md:text-[96px] font-extrabold text-white mb-10 leading-tight drop-shadow-lg">
+              Building{" "}
+              <span className="bg-gradient-to-r from-indigo-400 via-pink-400 to-orange-300 bg-clip-text text-transparent">
+                Digital Experiences
               </span>
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              We create exceptional websites, mobile apps, and digital solutions
-              that help businesses thrive in the modern digital landscape.
+            </div>
+            <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto">
+              We design, build, and launch digital experiences that empower
+              brands and captivate audiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-10 py-4 bg-white text-black text-lg font-semibold rounded-xl hover:bg-gray-200 transition-colors group shadow-lg"
+                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-lg font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg"
               >
                 Get Started
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-3 h-5 w-5" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center px-10 py-4 border-2 border-gray-600 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-colors shadow-lg"
+                className="inline-flex items-center px-10 py-4 border-2 border-white text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all shadow-lg"
               >
                 View Our Work
               </Link>
@@ -216,7 +228,7 @@ const Home = () => {
               >
                 {/* Image */}
                 {/* Person Icon instead of Image */}
-<User className="w-24 h-24 text-gray-400 mb-4 border-2 border-gray-300 rounded-full p-4 bg-gray-100" />
+                <User className="w-24 h-24 text-gray-400 mb-4 border-2 border-gray-300 rounded-full p-4 bg-gray-100" />
 
                 {/* Rating */}
                 <div className="flex mb-4">
@@ -247,12 +259,15 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gotham">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 bg-gradient-to-r from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] relative overflow-hidden">
+        {/* Soft overlay for text readability */}
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-md">
             Ready to Chat with Us?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help bring your digital vision to life and
             drive your business forward.
           </p>
@@ -261,12 +276,16 @@ const Home = () => {
             href="https://wa.me/60113094116?text=Hello%2C%20I%27m%20interested%20in%20your%20services!"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors group"
+            className="inline-flex items-center px-8 py-3 bg-white text-[#4E56C0] font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
             Chat with Us
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
+
+        {/* Animated background glow */}
+        <div className="absolute -bottom-32 -left-20 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -top-32 -right-20 w-96 h-96 bg-[#9B5DE0]/40 rounded-full blur-3xl animate-pulse"></div>
       </section>
     </div>
   );

@@ -19,8 +19,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-1 text-xl">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Code className="h-8 w-8 text-black" />
-              <span className="text-xl font-bold">BlinkCode</span>
+              <Code className="h-24 w-24 text-black" />
+              <span className="text-7xl font-bold">BlinkCode</span>
             </Link>
             <p className="text-gray-600 mb-4 max-w-md text-left text-xl">
               We create exceptional digital experiences through innovative web
@@ -30,35 +30,35 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="pl-16 text-lg">
-            <h3 className="text-xl font-semibold mb-4 underline">
+            <h3 className="text-3xl font-semibold mb-4 underline">
               Quick Links
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-2xl">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-black">
+                <Link to="/" className="text-gray-600 hover:text-black hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-black">
+                <Link to="/about" className="text-gray-600 hover:text-black hover:underline">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-black">
+                <Link to="/services" className="text-gray-600 hover:text-black hover:underline">
                   Services
                 </Link>
               </li>
               <li>
                 <Link
                   to="/portfolio"
-                  className="text-gray-600 hover:text-black"
+                  className="text-gray-600 hover:text-black hover:underline"
                 >
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-black">
+                <Link to="/contact" className="text-gray-600 hover:text-black hover:underline">
                   Contact
                 </Link>
               </li>
@@ -67,28 +67,28 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 underline">
+            <h3 className="text-3xl font-semibold mb-4 underline">
               Contact Info
             </h3>
-            <div className="space-y-3 text-lg">
+            <div className="space-y-3 text-xl">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">hej@blinkcode.com</span>
+                <span className="text-gray-600 text-2xl">hej@blinkcode.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">60124277286</span>
+                <span className="text-gray-600 text-2xl">60124277286</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600">Kuala Lumpur, Malaysia</span>
+                <span className="text-gray-600 text-2xl">Kuala Lumpur, Malaysia</span>
               </div>
             </div>
           </div>
 
           {/* Map in its own column */}
           <div>
-            <div className="rounded-lg overflow-hidden shadow-lg w-full h-80">
+            <div className="rounded-lg overflow-hidden shadow-lg w-full h-[400px]">
               <iframe
                 title="Google Map"
                 src="https://www.google.com/maps?q=PJ%20SUBANG%20KL&output=embed"

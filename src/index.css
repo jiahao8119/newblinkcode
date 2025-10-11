@@ -20,9 +20,16 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Blinkcode';
+  src: url('/fonts/blinkcode.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 html, body {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Blinkcode', sans-serif;
 }
 
 /* Optional: reset heading tags to inherit */
@@ -42,3 +49,31 @@ h1, h2, h3, h4, h5, h6, p, span, div {
     left: 150%;
   }
 }
+
+/* 🌌 Aurora Moving Background */
+.aurora {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(78, 86, 192, 0.45),   /* #4E56C0 */
+    rgba(155, 93, 224, 0.45),  /* #9B5DE0 */
+    rgba(215, 143, 238, 0.45), /* #D78FEE */
+    rgba(253, 207, 250, 0.45), /* #FDCFFA */
+    rgba(78, 86, 192, 0.45)
+  );
+  filter: blur(180px) saturate(180%);
+  opacity: 0.75;
+  animation: auroraFlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes auroraFlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(25deg) scale(1.1) translateY(-3%);
+  }
+  100% {
+    transform: rotate(-20deg) scale(1.05) translateY(3%);
+  }
+}
+

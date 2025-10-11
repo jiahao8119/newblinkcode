@@ -14,9 +14,17 @@
   font-display: swap;
 }
 
-/* Example: Apply Gotham font globally */
+@font-face {
+  font-family: 'Blinkcode';
+  src: url('/fonts/blinkcode.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Example: Apply Blinkcode font globally */
 h1, h2, h3, h4, span, p {
-  font-family: 'Gotham', Arial, sans-serif;
+  font-family: 'Blinkcode', Arial, sans-serif;
 }
 
 /* Add your custom global styles below */

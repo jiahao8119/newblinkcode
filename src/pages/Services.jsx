@@ -106,7 +106,6 @@ const Services = () => {
       price: "Starting at RM 7,999",
       image: "/images/services/webdev3.png",
       comingSoon: true,
-      
     },
     {
       icon: <Code className="h-12 w-12 text-white" />,
@@ -170,12 +169,15 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             We offer comprehensive digital solutions to help your business
             succeed in today's competitive online landscape.
           </p>
@@ -186,7 +188,7 @@ const Services = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-7xl font-bold text-[#4E56C0] mb-4">
               What We Do
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -208,49 +210,38 @@ const Services = () => {
                       alt={service.title}
                       className="w-full h-60 object-cover rounded-lg"
                     />
-                    {/* 🔥 Hot Selling badge */}
                     {service.hot && (
-                      <span className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                      <span className="absolute top-2 left-2 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                         🔥 Hot Selling
                       </span>
                     )}
                   </div>
                 )}
-
-                {/* Icon + Title */}
                 <div className="mb-4 text-black">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-black mb-2">
                   {service.title}
                 </h3>
-
-                {/* Price */}
                 <div className="text-gray-700 font-medium mb-4">
                   {service.price}
                 </div>
-
-                {/* Description */}
                 <p className="text-gray-600 mb-4">{service.description}</p>
-
-                {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className="flex items-center text-gray-700"
                     >
-                      <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-[#9B5DE0] rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
-
-                {/* Button */}
                 {service.comingSoon ? (
                   <button className="mt-auto w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg cursor-not-allowed">
                     Coming Soon
                   </button>
                 ) : (
-                  <button className="mt-auto w-full border border-black text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                  <button className="mt-auto w-full border border-[#9B5DE0] text-[#9B5DE0] px-6 py-3 rounded-lg hover:bg-[#FDCFFA]/20 transition-colors">
                     Learn More
                   </button>
                 )}
@@ -265,20 +256,19 @@ const Services = () => {
       <section className="py-20 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-7xl font-bold mb-4">
               Project Timeline
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
               We follow a proven methodology to ensure every project is
               delivered on time, within budget, and exceeds expectations.
             </p>
           </div>
 
-          {/* Progress Bar */}
+          {/* Animated progress bar */}
           <div className="relative w-full h-2 bg-gray-200 rounded-full mb-16 overflow-hidden">
-            {/* Filled progress */}
             <motion.div
-              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"
+              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-[#4E56C0] via-[#9B5DE0] to-[#FDCFFA] rounded-full"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{
@@ -286,25 +276,14 @@ const Services = () => {
                 repeat: Infinity,
                 repeatType: "reverse",
               }}
-            >
-              {/* Shine overlay */}
-              <div className="absolute inset-0 overflow-hidden rounded-full">
-                <div className="shine absolute top-0 left-[-50%] h-full w-1/3 bg-white/40 skew-x-12"></div>
-              </div>
-            </motion.div>
-
-            {/* 🚀 Rocket wrapper full width */}
+            />
             <div className="absolute -top-10 left-0 w-full h-10 pointer-events-none">
               <motion.div
                 className="absolute"
                 animate={{ x: ["0%", "100%"] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               >
-                <Rocket className="h-8 w-8 text-pink-500 drop-shadow-lg" />
+                <Rocket className="h-8 w-8 text-[#9B5DE0] drop-shadow-lg" />
               </motion.div>
             </div>
           </div>
@@ -312,18 +291,17 @@ const Services = () => {
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {process.map((item, index) => {
-              const currentStep = 3; // <-- dynamically set this from props/state
+              const currentStep = 3;
               const isCompleted = index < currentStep;
 
               return (
                 <div key={index} className="text-center relative z-10">
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full border-4 text-xl font-bold transition-all duration-500
-                      ${
-                        isCompleted
-                          ? "bg-gradient-to-br from-black via-gray-900 to-black text-white border-transparent"
-                          : "border-black text-black"
-                      }`}
+                    className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full border-4 text-xl font-bold transition-all duration-500 ${
+                      isCompleted
+                        ? "bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white border-transparent"
+                        : "border-[#9B5DE0] text-[#9B5DE0]"
+                    }`}
                   >
                     {item.step}
                   </div>
@@ -338,134 +316,94 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* 🌈 Compare Our Services */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-7xl font-extrabold mb-6 drop-shadow">
               Compare Our Services
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto">
               See which package best fits your business needs.
             </p>
           </div>
 
           {/* Table */}
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse shadow-lg rounded-3xl overflow-hidden bg-white">
-              <thead className="bg-gray-200">
+            <table className="w-full border-collapse shadow-xl rounded-3xl overflow-hidden bg-white/90 backdrop-blur-md">
+              <thead className="bg-gradient-to-r from-[#9B5DE0]/60 to-[#D78FEE]/60 text-white">
                 <tr>
-                  <th className="p-5 text-left text-gray-900 font-semibold text-lg">
+                  <th className="p-5 text-left font-semibold text-3xl">
                     Features
                   </th>
                   <th className="p-5">
                     <div className="flex flex-col items-center">
-                      <span className="font-bold text-gray-900">Starter</span>
-                      <span className="text-sm text-gray-500">RM 1,199+</span>
+                      <span className="font-bold text-3xl">Starter</span>
+                      <span className="text-2xl opacity-80">RM 1,199+</span>
                     </div>
                   </th>
-                  <th className="p-5 bg-gray-900 text-white rounded-t-lg">
+                  <th className="p-5 bg-gradient-to-r from-[#4E56C0] to-[#9B5DE0] text-white">
                     <div className="flex flex-col items-center">
-                      <span className="font-bold">Business</span>
-                      <span className="text-sm opacity-80">RM 3,999+</span>
+                      <span className="font-bold text-3xl">Business</span>
+                      <span className="text-2xl opacity-80">RM 3,999+</span>
                     </div>
-                    <span className="mt-2 inline-block text-xs font-semibold px-2 py-1 bg-yellow-400 text-gray-900 rounded">
+                    <span className="mt-2 inline-block text-xs font-semibold px-2 py-1 bg-yellow-300 text-gray-900 rounded">
                       Most Popular
                     </span>
                   </th>
                   <th className="p-5">
                     <div className="flex flex-col items-center">
-                      <span className="font-bold text-gray-900">
+                      <span className="font-bold text-[#4E56C0] text-3xl">
                         Enterprise
                       </span>
-                      <span className="text-sm text-gray-500">RM 7,999+</span>
+                      <span className="text-2xl text-gray-600">RM 7,999+</span>
                     </div>
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 text-gray-700">
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Pages</td>
-                  <td className="p-4 text-center font-bold">5</td>
-                  <td className="p-4 text-center font-bold">15</td>
-                  <td className="p-4 text-center font-bold">30+</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Revisions</td>
-                  <td className="p-4 text-center font-bold">3</td>
-                  <td className="p-4 text-center font-bold">10</td>
-                  <td className="p-4 text-center font-bold">unlimited</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    SEO Optimization
-                  </td>
-                  <td className="p-4 text-center font-bold">Basic</td>
-                  <td className="p-4 text-center font-bold">Advanced</td>
-                  <td className="p-4 text-center font-bold">Enterprise</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">E-commerce</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Mobile App</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">Custom API</td>
-                  <td className="p-4 text-center">❌</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    Free 1 year Hosting
-                  </td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    Free 1 year Domain
-                  </td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">SSL protection</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                  <td className="p-4 text-center">✅</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition">
-                  <td className="p-4 text-left font-medium">
-                    Support & Maintenance
-                  </td>
-                  <td className="p-4 text-center font-bold">3 months</td>
-                  <td className="p-4 text-center font-bold">6 months</td>
-                  <td className="p-4 text-center font-bold">12 months</td>
-                </tr>
+              <tbody className="divide-y divide-gray-200 text-gray-800">
+                {[
+                  ["Pages", "5", "15", "30+"],
+                  ["Revisions", "3", "10", "Unlimited"],
+                  ["SEO Optimization", "Basic", "Advanced", "Enterprise"],
+                  ["E-commerce", "❌", "❌", "✅"],
+                  ["Mobile App", "❌", "❌", "✅"],
+                  ["Custom API", "❌", "✅", "✅"],
+                  ["Free 1 Year Hosting", "✅", "✅", "✅"],
+                  ["Free 1 Year Domain", "✅", "✅", "✅"],
+                  ["SSL Protection", "✅", "✅", "✅"],
+                  [
+                    "Support & Maintenance",
+                    "3 months",
+                    "6 months",
+                    "12 months",
+                  ],
+                ].map(([feature, s, b, e], i) => (
+                  <tr key={i} className="hover:bg-[#FDCFFA]/20 transition">
+                    <td className="p-4 text-left font-medium">{feature}</td>
+                    <td className="p-4 text-center">{s}</td>
+                    <td className="p-4 text-center font-semibold text-[#9B5DE0]">
+                      {b}
+                    </td>
+                    <td className="p-4 text-center">{e}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 💠 Technologies Section */}
+      <section className="py-20 relative bg-white overflow-hidden">
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-7xl font-bold mb-4">
               Technologies We Use
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We work with the latest technologies and frameworks to build
               scalable, secure, and high-performance solutions.
             </p>
@@ -478,7 +416,7 @@ const Services = () => {
               animate={{ x: ["0%", "-100%"] }}
               transition={{
                 ease: "linear",
-                duration: 30, // adjust slower/faster
+                duration: 30,
                 repeat: Infinity,
               }}
             >
@@ -490,9 +428,9 @@ const Services = () => {
                   <img
                     src={tech.logo}
                     alt={tech.name}
-                    className="w-16 h-16 object-contain mb-2"
+                    className="w-16 h-16 object-contain mb-2 drop-shadow-lg"
                   />
-                  <span className="text-sm font-medium text-gray-700">
+                  <span className="text-sm font-medium text-gray-800">
                     {tech.name}
                   </span>
                 </div>
@@ -502,21 +440,24 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+      {/* 🚀 CTA Section */}
+      <section className="relative py-20 bg-gradient-to-r from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss your project and how we can help bring your vision to
             life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+            <button className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
               Get a Quote
             </button>
-            <button className="px-8 py-3 border border-black text-black font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <button className="px-8 py-3 border border-white text-white text-2xl font-semibold rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>

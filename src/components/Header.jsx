@@ -19,19 +19,19 @@ const Header = () => {
   return (
     <header
       className="fixed w-full top-0 z-50 rounded-3xl"
-      style={{ fontFamily: "Gotham, sans-serif" }}
+      style={{ fontFamily: "blinkcode, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="flex justify-between items-center h-24
-          rounded-3xl px-6 mt-4
+          rounded-3xl px-6 mt-4 
           bg-white/50 backdrop-blur-xl shadow-lg border border-white/20"
         >
           {/* Logo */}
           <Link
             to="/"
             className="flex items-center space-x-2 group"
-            style={{ fontFamily: "Gotham, sans-serif" }}
+            style={{ fontFamily: "blinkcode, sans-serif" }}
           >
             <Code className="h-8 w-8 text-black group-hover:text-gray-700 transition-colors" />
             <span className="text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">
@@ -42,7 +42,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav
             className="hidden md:flex space-x-2"
-            style={{ fontFamily: "Gotham, sans-serif" }}
+            style={{ fontFamily: "blinkcode, sans-serif" }}
           >
             {navigation.map((item) => (
               <Link

@@ -1,80 +1,83 @@
-import React, { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState("All");
   const navigate = useNavigate();
 
   const projects = [
     {
       id: 1,
-      title: 'Beauty Website',
-      category: 'Landing Page',
-      image: '/images/beautylogo.png',
+      title: "Beauty Website",
+      category: "Landing Page",
+      image: "/images/beautylogo.png",
       description:
-        'Elegant beauty brand site with modern design and smooth user experience.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-      liveUrl: '#',
+        "Elegant beauty brand site with modern design and smooth user experience.",
+      technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      liveUrl: "#",
     },
     {
       id: 2,
-      title: 'Lan Zhou mee',
-      category: 'Landing Page',
-      image: '/images/lanzhou.png',
+      title: "Lan Zhou mee",
+      category: "Landing Page",
+      image: "/images/lanzhou.png",
       description:
-        'Landing page for a noodle restaurant showcasing menu and story.',
-      technologies: ['Next.js', 'Stripe', 'PostgreSQL', 'TypeScript'],
-      liveUrl: '#',
+        "Landing page for a noodle restaurant showcasing menu and story.",
+      technologies: ["Next.js", "Stripe", "PostgreSQL", "TypeScript"],
+      liveUrl: "#",
     },
     {
       id: 3,
-      title: 'Car detailing Website',
-      category: 'E-commerce',
-      image: '/images/dzimo.png',
+      title: "Car detailing Website",
+      category: "E-commerce",
+      image: "/images/dzimo.png",
       description:
-        'Automotive detailing website with services, booking, and promos.',
-      technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
-      liveUrl: '#',
+        "Automotive detailing website with services, booking, and promos.",
+      technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
+      liveUrl: "#",
     },
     {
       id: 4,
-      title: 'Education Website',
-      category: 'Landing Page',
-      image: '/images/eduproject.png',
+      title: "Education Website",
+      category: "Landing Page",
+      image: "/images/eduproject.png",
       description:
-        'Informative education site for courses, programs, and enrollment.',
-      technologies: ['Vue.js', 'Express', 'MySQL', 'Chart.js'],
-      liveUrl: '#',
+        "Informative education site for courses, programs, and enrollment.",
+      technologies: ["Vue.js", "Express", "MySQL", "Chart.js"],
+      liveUrl: "#",
     },
     {
       id: 5,
-      title: 'Unix Moulding Engineering',
-      category: 'Website',
-      image: '/images/unix.png',
+      title: "Unix Moulding Engineering",
+      category: "Website",
+      image: "/images/unix.png",
       description:
-        'Industrial company site highlighting moulding and CNC engineering services.',
-      technologies: ['React', 'Node.js', 'Stripe', 'Tailwind CSS'],
-      liveUrl: '#',
+        "Industrial company site highlighting moulding and CNC engineering services.",
+      technologies: ["React", "Node.js", "Stripe", "Tailwind CSS"],
+      liveUrl: "#",
     },
   ];
 
-  const categories = ['All', 'Website', 'E-commerce', 'Mobile App', 'Web App'];
+  const categories = ["All", "Website", "E-commerce", "Mobile App", "Web App"];
 
   const filteredProjects =
-    activeFilter === 'All'
+    activeFilter === "All"
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      {/* 🌈 Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
             Our Portfolio
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Explore our latest projects and see how we've helped businesses
             transform their digital presence with innovative solutions.
           </p>
@@ -89,10 +92,10 @@ const Portfolio = () => {
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                className={`px-6 py-2 rounded-full font-medium transition-all ${
                   activeFilter === category
-                    ? 'bg-black text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? "bg-gradient-to-r from-[#4E56C0] to-[#9B5DE0] text-white shadow-md"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
                 {category}
@@ -127,11 +130,11 @@ const Portfolio = () => {
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <a
                           href={project.liveUrl}
-                          className="bg-white text-black p-2 rounded-full hover:bg-gray-200 transition-colors"
+                          className="bg-white text-[#4E56C0] p-2 rounded-full hover:bg-gray-100 transition"
                         >
                           <ExternalLink className="h-5 w-5" />
                         </a>
@@ -143,29 +146,27 @@ const Portfolio = () => {
                       <h3 className="text-xl font-semibold text-black">
                         {project.title}
                       </h3>
-                      <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded">
+                      <span className="bg-[#9B5DE0]/20 text-[#4E56C0] text-sm px-2 py-1 rounded">
                         {project.category}
                       </span>
                     </div>
                     <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    {/* <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="bg-blue-400 text-white text-xs px-2 py-1 rounded"
+                          className="bg-gradient-to-r from-[#9B5DE0] to-[#D78FEE] text-white text-xs px-2 py-1 rounded"
                         >
                           {tech}
                         </span>
                       ))}
-                    </div>
-                    <div className="flex space-x-4">
-                      <a
-                        href={project.liveUrl}
-                        className="flex-1 bg-blue-500 text-white text-center py-2 rounded-lg hover:bg-gray-600 transition-colors"
-                      >
-                        View Website
-                      </a>
-                    </div>
+                    </div> */}
+                    <a
+                      href={project.liveUrl}
+                      className="block w-full text-center bg-gradient-to-r from-[#4E56C0] to-[#9B5DE0] text-white py-2 rounded-lg hover:opacity-90 transition"
+                    >
+                      View Website
+                    </a>
                   </div>
                 </div>
               ))}
@@ -174,18 +175,18 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* PDF Viewer Section */}
-      <section className="py-20 bg-gray-50 border-t border-b">
+      {/* 📄 PDF Viewer Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+          <h2 className="text-3xl md:text-7xl font-bold mb-6">
             Company Profile & Case Study
           </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
             Check out our company profile and explore how we approach each
             project with innovation, strategy, and results-driven execution.
           </p>
 
-          <div className="w-full mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
+          <div className="w-full mx-auto rounded-xl overflow-hidden shadow-2xl bg-white/90">
             <iframe
               src="/portfolio/blinkcodeport.pdf"
               width="100%"
@@ -199,26 +200,29 @@ const Portfolio = () => {
             href="/portfolio/blinkcodeport.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 text-blue-600 font-semibold hover:underline"
+            className="inline-block mt-6 text-[#9B5DE0] font-semibold hover:underline"
           >
             Open Full PDF in New Tab →
           </a>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      {/* 🚀 CTA Section */}
+      <section className="relative py-20 bg-gradient-to-r from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-7xl font-bold mb-4 drop-shadow-lg">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
             Let's create something amazing together. Contact us to discuss your
             project requirements and get a free consultation.
           </p>
           <button
-            className="px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-200 transition-colors"
-            onClick={() => navigate('/contact')}
+            className="px-8 py-3 bg-white text-[#4E56C0] md:text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition"
+            onClick={() => navigate("/contact")}
           >
             Start Your Project
           </button>
