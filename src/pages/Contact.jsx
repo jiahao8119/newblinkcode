@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import emailjs from "emailjs-com";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +21,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
+      )
+      .then(
+        (result) => {
+          console.log("✅ Email sent:", result.text);
+          alert("Message sent successfully! We’ll be in touch soon.");
+        },
+        (error) => {
+          console.error("❌ Error sending email:", error.text);
+          alert("Something went wrong, please try again later.");
+        }
+      );
+
     setFormData({
       name: "",
       email: "",
@@ -27,7 +53,6 @@ const Contact = () => {
       message: "",
       service: "",
     });
-    alert("Thank you for your message! We'll get back to you soon.");
   };
 
   const contactInfo = [
