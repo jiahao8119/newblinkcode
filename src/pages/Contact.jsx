@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import emailjs from "emailjs-com";
+import SEO from "../components/SEO";
+
 
 
 const Contact = () => {
