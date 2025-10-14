@@ -270,7 +270,7 @@ const Home = () => {
           </p>
 
           <a
-            href="https://wa.me/60113094116?text=Hello%2C%20I%27m%20interested%20in%20your%20services!"
+            href="https://wa.me/60175730388?text=Hi,%20I%27m%20interested%20in%20your%20services!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-3 bg-white text-[#4E56C0] font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"

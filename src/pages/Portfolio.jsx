@@ -9,43 +9,43 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Beauty Website",
+      title: "Beauty site",
       category: "Landing Page",
       image: "/images/beautylogo.png",
       description:
         "Elegant beauty brand site with modern design and smooth user experience.",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      liveUrl: "#",
+      liveUrl: "https://www.anggunskin.com/",
     },
     {
       id: 2,
-      title: "Lan Zhou mee",
+      title: "Lan Zhou Cuisine",
       category: "Landing Page",
       image: "/images/lanzhou.png",
       description:
         "Landing page for a noodle restaurant showcasing menu and story.",
       technologies: ["Next.js", "Stripe", "PostgreSQL", "TypeScript"],
-      liveUrl: "#",
+      liveUrl: "https://lanzhou-iota.vercel.app/",
     },
     {
       id: 3,
-      title: "Car detailing Website",
+      title: "Car Detailing Products",
       category: "E-commerce",
       image: "/images/dzimo.png",
       description:
         "Automotive detailing website with services, booking, and promos.",
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-      liveUrl: "#",
+      liveUrl: "https://www.dzimo.store/",
     },
     {
       id: 4,
-      title: "Education Website",
+      title: "SpeakUp ",
       category: "Landing Page",
       image: "/images/eduproject.png",
       description:
         "Informative education site for courses, programs, and enrollment.",
       technologies: ["Vue.js", "Express", "MySQL", "Chart.js"],
-      liveUrl: "#",
+      liveUrl: "https://eduproject-mu.vercel.app/",
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ const Portfolio = () => {
       description:
         "Industrial company site highlighting moulding and CNC engineering services.",
       technologies: ["React", "Node.js", "Stripe", "Tailwind CSS"],
-      liveUrl: "#",
+      liveUrl: "https://www.unixmouldengineering.com/",
     },
   ];
 
@@ -133,7 +133,9 @@ const Portfolio = () => {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <a
                           href={project.liveUrl}
-                          className="bg-white text-[#4E56C0] p-2 rounded-full hover:bg-gray-100 transition"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white p-2 rounded-full transition"
                         >
                           <ExternalLink className="h-8 w-8" />
                         </a>
@@ -154,7 +156,7 @@ const Portfolio = () => {
                       href={project.liveUrl}
                       className="block w-full text-center bg-gradient-to-r from-[#4E56C0] to-[#9B5DE0] text-white py-2 rounded-lg hover:opacity-90 transition"
                     >
-                      View Website
+                      View
                     </a>
                   </div>
                 </div>

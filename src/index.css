@@ -106,4 +106,10 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   animation: fadeInBlur 1.2s ease-out forwards;
 }
 
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(155,93,224,0.4), 0 0 10px rgba(155,93,224,0.3); }
+  50% { box-shadow: 0 0 20px rgba(155,93,224,0.7), 0 0 40px rgba(155,93,224,0.5); }
+  100% { box-shadow: 0 0 5px rgba(155,93,224,0.4), 0 0 10px rgba(155,93,224,0.3); }
+}
+
 

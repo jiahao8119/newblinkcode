@@ -7,10 +7,13 @@ import {
   Palette,
   Server,
   Shield,
+  ExternalLink
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Rocket } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 const techs = [
   {
@@ -60,6 +63,7 @@ const techs = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <Globe className="h-12 w-12 text-white" />,
@@ -137,6 +141,21 @@ const Services = () => {
       price: "Starting at RM 500 / month",
       image: "/images/services/webdev.png",
     },
+    {
+      icon: <Search className="h-12 w-12 text-white" />,
+      title: "Custom Software Development",
+      description:
+        "Tailored software solutions to meet your unique business needs.",
+      features: [
+        "Custom Applications",
+        "API Development",
+        "Integration Services",
+        "Cloud Solutions",
+      ],
+      hot: true,
+      price: "Starting at RM 500 / month",
+      image: "/images/services/webdev.png",
+    },
   ];
 
   const process = [
@@ -201,7 +220,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col"
+                className="bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-[0_0_25px_5px_rgba(155,93,224,0.6)] p-6 flex flex-col"
               >
                 {service.image && (
                   <div className="mb-4 relative">
@@ -241,8 +260,9 @@ const Services = () => {
                     Coming Soon
                   </button>
                 ) : (
-                  <button className="mt-auto w-full border border-[#9B5DE0] text-[#9B5DE0] px-6 py-3 rounded-lg hover:bg-[#FDCFFA]/20 transition-colors">
+                  <button onClick={() => navigate("/contact")} className="mt-auto w-full border border-[#9B5DE0] text-[#9B5DE0] px-6 py-3 rounded-lg hover:bg-[#FDCFFA]/20 transition-colors">
                     Learn More
+                    <ExternalLink className="inline-block ml-2" />               
                   </button>
                 )}
               </div>
@@ -454,10 +474,10 @@ const Services = () => {
             life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
+            <button onClick={() => navigate("/contact")} className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
               Get a Quote
             </button>
-            <button className="px-8 py-3 border border-white text-white text-2xl font-semibold rounded-lg hover:bg-white/10 transition">
+            <button onClick={() => window.open("https://wa.me/60175730388?text=Hi,%20I%27m%20interested%20in%20your%20services.", "_blank")} className="px-8 py-3 border border-white text-white text-2xl font-semibold rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>
