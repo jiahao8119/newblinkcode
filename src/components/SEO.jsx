@@ -9,7 +9,7 @@ const SEO = ({
   url = "",
   type = "website"
 }) => {
-  const siteUrl = "https://yourdomain.com"; // Replace with your actual domain
+  const siteUrl = "https://www.blinkcodedev.com/"; // Replace with your actual domain
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
