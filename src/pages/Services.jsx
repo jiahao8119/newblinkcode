@@ -186,6 +186,12 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <SEO 
+      title="Services | BlinkCode"
+      description="Explore BlinkCode's web development, mobile apps, e-commerce, and SEO services."
+      url="/services"
+    />
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
@@ -484,6 +490,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import SEO from "../components/SEO";
 
 const services = [
   {
@@ -68,7 +69,14 @@ const Home = () => {
   }, [testimonials.length]);
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO 
+        title="BlinkCode | Modern Web Development & Digital Solutions"
+        description="Transform your business with BlinkCode's expert web development, mobile apps, and digital solutions. Get custom websites, e-commerce platforms, and more. Contact us for a free consultation."
+        keywords="web development, mobile apps, digital agency, custom websites, e-commerce, React development, responsive design, BlinkCode, Malaysia web developer"
+        url="/"
+      />
+      <div className="min-h-screen">
       <section className="mt-[-90px] relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
           <img
@@ -284,7 +292,8 @@ const Home = () => {
         <div className="absolute -bottom-32 -left-20 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -top-32 -right-20 w-96 h-96 bg-[#9B5DE0]/40 rounded-full blur-3xl animate-pulse"></div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

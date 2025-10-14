@@ -1,5 +1,7 @@
 import React from 'react';
 import { Users, Target, Award, Heart } from 'lucide-react';
+import SEO from "../components/SEO";
+
 
 const About = () => {
   const team = [
@@ -17,6 +19,12 @@ const About = () => {
   ];
 
   return (
+    <>
+    <SEO 
+      title="About Us | BlinkCode"
+      description="Learn about BlinkCode's team and mission..."
+      url="/about"
+    />
     <div className="min-h-screen pt-16">
 
       {/* 🌈 Hero Section - Recolored */}
@@ -186,7 +194,9 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
+
 
 export default About;

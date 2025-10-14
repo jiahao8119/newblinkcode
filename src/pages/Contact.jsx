@@ -91,6 +91,12 @@ const Contact = () => {
   ];
 
   return (
+    <>
+    <SEO 
+      title="Contact Us | BlinkCode"
+      description="Get in touch with BlinkCode for inquiries and support."
+      url="/contact"
+    />
     <div className="min-h-screen pt-16">
       {/* 🌈 Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
@@ -332,6 +338,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

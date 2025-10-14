@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { ExternalLink } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { ExternalLink, Github } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState('All');
   const navigate = useNavigate();
 
   const projects = [
@@ -67,7 +68,14 @@ const Portfolio = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEO 
+        title="Portfolio | BlinkCode - Our Web Development Projects"
+        description="Explore BlinkCode's portfolio of successful web development projects including e-commerce sites, mobile apps, and custom websites. See our work and client success stories."
+        keywords="portfolio, web development projects, e-commerce websites, mobile apps, client work, BlinkCode portfolio"
+        url="/portfolio"
+      />
+      <div className="min-h-screen pt-16">
       <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FDCFFA]/40 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#D78FEE]/40 rounded-full blur-3xl animate-pulse"></div>
@@ -219,7 +227,8 @@ const Portfolio = () => {
           </button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
