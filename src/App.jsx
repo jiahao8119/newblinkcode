@@ -16,9 +16,9 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setFadeOut(true); // start fade+blur out animation
-      setTimeout(() => setLoading(false), 700); // wait until fade-out completes
-    }, 1500); // show loader for 1.5s
+      setFadeOut(true);
+      setTimeout(() => setLoading(false), 700);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -69,7 +69,7 @@ function App() {
 
           {/* Floating WhatsApp Button */}
           <a
-            href="https://wa.me/60124277286?text=Hi%20there!%20I%20want%20to%20know%20more%20about%20your%20websites%20services."
+            href="https://wa.me/60175730388?text=Hi%20there!%20I%20want%20to%20know%20more%20about%20your%20websites%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="sticky w-12 h-12 bottom-6 left-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"

@@ -7,8 +7,8 @@ const About = () => {
   const team = [
     { name: 'Ryan', role: 'CEO & Founder', image: '/images/nfthead/nft1.png', description: 'Visionary leader with 15+ years in tech entrepreneurship.' },
     { name: 'Jh', role: 'CTO', image: '/images/nfthead/nft2.png', description: 'Full-stack expert specializing in modern web technologies.' },
-    { name: 'ZF', role: 'Lead Designer', image: '/images/nfthead/nft3.png', description: 'Creative designer passionate about user experience.' },
-    { name: 'Dustin', role: 'Senior Developer', image: '/images/nfthead/nft4.png', description: 'Backend specialist with expertise in scalable solutions.' },
+    { name: 'ZF', role: 'Lead Designer', image: '/images/nfthead/punk.jpg', description: 'Creative designer passionate about user experience.' },
+    { name: 'Dustin', role: 'Senior Developer', image: '/images/nfthead/cryptopunk2.png', description: 'Backend specialist with expertise in scalable solutions.' },
   ];
 
   const values = [
