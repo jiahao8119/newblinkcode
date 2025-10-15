@@ -85,7 +85,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 justify-center md:justify-start">
                 <Mail className="h-4 w-4 text-gray-600" />
                 <span className="text-gray-600 text-xl">
-                  hej@blinkcode.com
+                  blinkcodewebdev@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-2 justify-center md:justify-start">

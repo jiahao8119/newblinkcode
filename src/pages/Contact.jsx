@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-8 w-8 text-white" />,
       title: "Email",
-      details: "hello@devstudio.com",
+      details: "blinkcodewebdev@gmail.com",
       description: "Send us an email anytime",
     },
     {
