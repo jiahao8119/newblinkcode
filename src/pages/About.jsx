@@ -35,7 +35,7 @@ const About = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-            About DevStudio
+            About BlinkCode
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
             We're a passionate team of developers, designers, and digital strategists 
@@ -54,7 +54,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 text-justify sm:text-center lg:text-justify">
-                Founded in 2024, BlinkCodeDevStudio began as a small team of passionate developers
+                Founded in 2024, BlinkCode began as a small team of passionate developers
                 who believed that exceptional digital experiences could transform businesses.
                 What started as a two-person team startup has grown into a leading web
                 development agency serving clients worldwide.
