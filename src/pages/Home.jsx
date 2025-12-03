@@ -71,18 +71,18 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="BlinkCode | Modern Web Development & Digital Solutions"
+        title="BlinkCode | Modern Web Development & eDigital Solutions"
         description="Transform your business with BlinkCode's expert web development, mobile apps, and digital solutions. Get custom websites, e-commerce platforms, and more. Contact us for a free consultation."
         keywords="web development, mobile apps, digital agency, custom websites, e-commerce, React development, responsive design, BlinkCode, Malaysia web developer"
         url="/"
       />
       <div className="min-h-screen">
-      <section className="mt-[-90px] relative overflow-hidden py-20 sm:py-40 lg:py-52 bg-[#0f172a] text-white">
-        <div className="absolute inset-0 flex items-center justify-center opacity-30">
+      <section className="mt-[-90px] relative overflow-hidden lg:py-52 text-white">
+        <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="/images/earth.jpg"
+            src="/images/banner.png"
             alt="Earth Background"
-            className="w-[900px] sm:w-[1400px] md:w-[2000px] h-auto object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0">
@@ -90,14 +90,14 @@ const Home = () => {
           <div className="absolute -bottom-32 -right-32 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-pink-500/40 to-orange-400/30 rounded-full blur-3xl opacity-40 animate-pulse" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center justify-center min-h-[24rem] sm:min-h-[32rem] text-center">
-          <h1 className="text-[38px] sm:text-[60px] md:text-[96px] font-extrabold text-white mb-6 sm:mb-10 leading-tight drop-shadow-lg px-4">
+          <h1 className="text-[38px] sm:text-[60px] md:text-[96px] font-extrabold text-black mb-6 sm:mb-10 leading-tight drop-shadow-lg px-4">
             Building{" "}
             <span className="bg-gradient-to-r from-indigo-400 via-pink-400 to-orange-300 bg-clip-text text-transparent">
               Digital Experiences
             </span>
           </h1>
 
-          <p className="text-base sm:text-2xl md:text-3xl text-gray-200 mb-10 sm:mb-12 max-w-2xl sm:max-w-4xl mx-auto px-4">
+          <p className="text-base sm:text-2xl md:text-3xl text-black mb-10 sm:mb-12 max-w-2xl sm:max-w-4xl mx-auto px-4">
             We design, build, and launch digital experiences that empower brands and
             captivate audiences.
           </p>
@@ -113,7 +113,7 @@ const Home = () => {
 
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border-2 border-white text-white text-base sm:text-lg font-semibold rounded-xl hover:bg-white/10 transition-all shadow-lg w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 border-2 border-white text-black text-base sm:text-lg font-semibold rounded-xl hover:bg-white/10 transition-all shadow-lg w-full sm:w-auto"
             >
               View Our Work
             </Link>
