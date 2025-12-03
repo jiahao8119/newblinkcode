@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// No loading logic required anymore
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header.jsx";
@@ -11,50 +11,12 @@ import Contact from "./pages/Contact";
 import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-      setTimeout(() => setLoading(false), 700);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div
-        className={`flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 text-white transition-all duration-700 ease-out ${
-          fadeOut ? "opacity-0 blur-md" : "opacity-100 blur-0"
-        }`}
-      >
-        <div className="text-center">
-          <img
-            src="/images/blinkcode.jpg"
-            alt="Blinkcode"
-            className="w-48 h-48 mx-auto mb-4 animate-pulse rounded-3xl shadow-2xl"
-          />
-          <p className="text-3xl font-mono text-gray-200">
-            {"Just A moment...".split("").map((char, i) => (
-              <span
-                key={i}
-                className="jump inline-block"
-                style={{ animationDelay: `${i * 0.08}s` }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            ))}
-          </p>
-        </div>
-      </div>
-    );
-  }
+  // No loading-related effects
 
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen flex flex-col opacity-0 blur-md animate-fadeInBlur">
+        <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">
             <Routes>
