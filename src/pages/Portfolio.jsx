@@ -68,7 +68,7 @@ const Portfolio = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <>
+    <> 
       <SEO 
         title="Portfolio | BlinkCode - Our Web Development Projects"
         description="Explore BlinkCode's portfolio of successful web development projects including e-commerce sites, mobile apps, and custom websites. See our work and client success stories."
