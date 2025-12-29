@@ -74,6 +74,26 @@ const Portfolio = () => {
         description="Explore BlinkCode's portfolio of successful web development projects including e-commerce sites, mobile apps, and custom websites. See our work and client success stories."
         keywords="portfolio, web development projects, e-commerce websites, mobile apps, client work, BlinkCode portfolio"
         url="/portfolio"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "BlinkCode Portfolio",
+          "description": "A collection of web development and digital transformation projects by BlinkCode.",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": projects.map((p, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "item": {
+                "@type": "CreativeWork",
+                "name": p.title,
+                "description": p.description,
+                "image": `https://www.blinkcodedev.com${p.image}`,
+                "url": p.liveUrl
+              }
+            }))
+          }
+        }}
       />
       <div className="min-h-screen pt-16">
       <section className="relative py-20 bg-gradient-to-br from-[#4E56C0] via-[#9B5DE0] to-[#D78FEE] text-white overflow-hidden">

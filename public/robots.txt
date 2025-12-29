@@ -1,9 +1,32 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.blinkcodedev.com/sitemap.xml
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
 
-# Disallow specific paths if needed
-# Disallow: /admin/
-# Disallow: /private/
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+Sitemap: https://www.blinkcodedev.com/sitemap.xml

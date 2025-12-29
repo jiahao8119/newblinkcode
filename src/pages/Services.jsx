@@ -190,9 +190,46 @@ const Services = () => {
   return (
     <>
     <SEO 
-      title="Services | BlinkCode"
-      description="Explore BlinkCode's web development, mobile apps, e-commerce, and SEO services."
+      title="Our Services | Custom Web & App Development | BlinkCode"
+      description="Professional web development, mobile apps, e-commerce, and SEO services in Malaysia. Tailored digital solutions to scale your business."
       url="/services"
+      schema={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Development & Digital Solutions",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "BlinkCode",
+          "address": "Malaysia"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "BlinkCode Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Website Development"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-commerce Solutions"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile App Development"
+              }
+            }
+          ]
+        }
+      }}
     />
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -464,6 +501,35 @@ const Services = () => {
                 </div>
               ))}
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#4E56C0] mb-12 text-center">
+            Service FAQs
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is your web development process?",
+                a: "We follow a 4-step process: Discovery & Planning, Design & Prototyping, Development & Testing, and finally Launch & Support."
+              },
+              {
+                q: "Do you offer maintenance after launch?",
+                a: "Yes, all our packages include a period of free support and maintenance (ranging from 3 to 12 months) to ensure your system runs smoothly."
+              },
+              {
+                q: "Can you help with SEO for my new website?",
+                a: "Absolutely! Every website we build is optimized for search engines from the ground up, and we offer dedicated SEO & Digital Marketing packages for ongoing growth."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-indigo-100">
+                <h3 className="text-xl font-semibold text-black mb-2">{faq.q}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -76,10 +76,40 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="BlinkCode | Modern Web Development & eDigital Solutions"
-        description="Transform your business with BlinkCode's expert web development, mobile apps, and digital solutions. Get custom websites, e-commerce platforms, and more. Contact us for a free consultation."
-        keywords="web development, mobile apps, digital agency, custom websites, e-commerce, React development, responsive design, BlinkCode, Malaysia web developer"
+        title="BlinkCode | Modern Web Development & Digital Solutions"
+        description="Transform your business with BlinkCode's expert web development, mobile apps, and digital solutions. Specialized in custom systems for Malaysian businesses."
+        keywords="web development Malaysia, mobile apps, digital agency, custom websites, e-commerce, React development, BlinkCode"
         url="/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does BlinkCode offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BlinkCode specializes in custom web development, mobile app creation, e-commerce solutions, and digital transformation for businesses in Malaysia and beyond."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why should I choose a custom system over WordPress?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custom systems are built specifically for your business workflow, offering better performance, security, and scalability compared to template-based solutions like WordPress."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you support Malaysian payment gateways?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we integrate with popular Malaysian payment methods including bank transfers, Touch 'n Go, GrabPay, and more."
+              }
+            }
+          ]
+        }}
       />
       <div className="min-h-screen">
         <section className="mt-[-90px] relative overflow-hidden lg:py-52 text-white">
@@ -605,6 +635,39 @@ const Home = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "What services does BlinkCode offer?",
+                  a: "BlinkCode specializes in custom web development, mobile app creation, e-commerce solutions, and digital transformation for businesses in Malaysia and beyond."
+                },
+                {
+                  q: "Why should I choose a custom system over WordPress?",
+                  a: "Custom systems are built specifically for your business workflow, offering better performance, security, and scalability compared to template-based solutions like WordPress."
+                },
+                {
+                  q: "Do you support Malaysian payment gateways?",
+                  a: "Yes, we integrate with popular Malaysian payment methods including bank transfers, Touch 'n Go, GrabPay, and more."
+                },
+                {
+                  q: "How long does a typical project take?",
+                  a: "A standard website typically takes 2-4 weeks, while complex web applications or mobile apps may take 2-3 months depending on requirements."
+                }
+              ].map((faq, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                  <h3 className="text-lg font-semibold text-black mb-2">{faq.q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
