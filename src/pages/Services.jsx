@@ -551,7 +551,7 @@ const Services = () => {
             <button onClick={() => navigate("/contact")} className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
               Get a Quote
             </button>
-            <button onClick={() => window.open("https://wa.me/60175730388?text=Hi,%20I%27m%20interested%20in%20your%20services.", "_blank")} className="px-8 py-3 border border-white text-white text-2xl font-semibold rounded-lg hover:bg-white/10 transition">
+            <button onClick={() => window.open("https://wa.me/601143765575?text=Hi,%20I%27m%20interested%20in%20your%20services.", "_blank")} className="px-8 py-3 border border-white text-white text-2xl font-semibold rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>

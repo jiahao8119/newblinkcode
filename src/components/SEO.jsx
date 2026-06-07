@@ -30,7 +30,7 @@ const SEO = ({
     "description": "Premium Web Development & Digital Solutions Agency in Malaysia.",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+60175730388",
+      "telephone": "+601143765575",
       "contactType": "sales",
       "areaServed": "MY",
       "availableLanguage": ["en", "ms"]

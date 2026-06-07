@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-8 w-8 text-white" />,
       title: "Phone",
-      details: "+60175730388",
+      details: "+601143765575",
       description: "Mon-Fri from 8am to 6pm",
     },
     {
@@ -334,7 +334,7 @@ const Contact = () => {
             Get in touch for a free consultation.
           </p>
           {/* whatsapp with prefilled msg */}
-          <button onClick={() => window.open("https://wa.me/60175730388?text=Hi,%20I%27m%20interested%20in%20your%20services.", "_blank")} className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
+          <button onClick={() => window.open("https://wa.me/601143765575?text=Hi,%20I%27m%20interested%20in%20your%20services.", "_blank")} className="px-8 py-3 bg-white text-[#4E56C0] text-2xl font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
             Schedule Consultation Now
           </button>
         </div>

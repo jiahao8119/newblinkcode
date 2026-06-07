@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 justify-center md:justify-start">
                 <Phone className="h-4 w-4 text-gray-600" />
-                <span className="text-gray-600 text-xl"><a href="tel:60175730388">60175730388</a></span>
+                <span className="text-gray-600 text-xl"><a href="tel:601143765575">601143765575</a></span>
               </div>
               <div className="flex items-center space-x-2 justify-center md:justify-start">
                 <MapPin className="h-4 w-4 text-gray-600" />
